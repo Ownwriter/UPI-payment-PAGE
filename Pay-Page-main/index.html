@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-card">
+            <!-- Header -->
+            <div class="header">
+                <div class="rupee-symbol">₹</div>
+                <p class="amount-text">The amount you need to pay</p>
+            </div>
+
+            <!-- Title -->
+            <h1 class="title">Select an option to pay(UPI)</h1>
+
+            <!-- Payment Options -->
+            <div class="payment-options">
+                <!-- PhonePe -->
+                <div class="payment-option selected" data-option="phonepe">
+                    <div class="option-left">
+                        <div class="icon phonepe-icon">
+                            <span class="phonepe-text">Pe</span>
+                        </div>
+                        <span class="option-name">PhonePe</span>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="payment" id="phonepe" checked>
+                        <div class="custom-radio">
+                            <div class="checkmark">✓</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PayTm -->
+                <div class="payment-option" data-option="paytm">
+                    <div class="option-left">
+                        <div class="icon paytm-icon">
+                            <span class="paytm-text">paytm</span>
+                        </div>
+                        <span class="option-name">PayTm</span>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="payment" id="paytm">
+                        <div class="custom-radio"></div>
+                    </div>
+                </div>
+
+                <!-- GooglePay -->
+                <div class="payment-option" data-option="googlepay">
+                    <div class="option-left">
+                        <div class="icon googlepay-icon">
+                            <div class="google-colors">
+                                <span class="color-1"></span>
+                                <span class="color-2"></span>
+                                <span class="color-3"></span>
+                                <span class="color-4"></span>
+                            </div>
+                        </div>
+                        <span class="option-name">GooglePay</span>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="payment" id="googlepay">
+                        <div class="custom-radio"></div>
+                    </div>
+                </div>
+
+                <!-- Mobikwik -->
+                <div class="payment-option" data-option="mobikwik">
+                    <div class="option-left">
+                        <div class="icon mobikwik-icon">
+                            <span class="mobikwik-text">M</span>
+                        </div>
+                        <span class="option-name">Mobikwik</span>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="payment" id="mobikwik">
+                        <div class="custom-radio"></div>
+                    </div>
+                </div>
+
+                <!-- Other UPI -->
+                <div class="payment-option" data-option="other">
+                    <div class="option-left">
+                        <div class="icon other-icon">
+                            <div class="other-graphic">
+                                <div class="screen"></div>
+                                <div class="stand"></div>
+                            </div>
+                        </div>
+                        <span class="option-name">Other UPI</span>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="payment" id="other">
+                        <div class="custom-radio"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fingerprint -->
+            <div class="fingerprint">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C10.35 2 9 3.58 9 5.5V6.5C9 7.05 9.45 7.5 10 7.5S11 7.05 11 6.5V5.5C11 4.67 11.67 4 12.5 4S14 4.67 14 5.5V12.5C14 13.33 13.33 14 12.5 14S11 13.33 11 12.5V10.5C11 9.95 10.55 9.5 10 9.5S9 9.95 9 10.5V12.5C9 14.42 10.35 16 12 16S15 14.42 15 12.5V5.5C15 3.58 13.65 2 12 2Z" fill="#ccc"/>
+                </svg>
+            </div>
+
+            <!-- Pay Button -->
+            <button class="pay-button" onclick="handlePayment()">
+                Pay ₹
+            </button>
+
+            <!-- Security Footer -->
+            <div class="security-footer">
+                <div class="shield-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="#00C853"/>
+                        <path d="M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="security-text">Secure Payment Powered by TkPay</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
